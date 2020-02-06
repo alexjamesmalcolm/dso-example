@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  deno:
+    container_name: dso-deno
+    build: ./backend
+    depends_on:
+      - db
+
+  db:
+    container_name: dso-mysql
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+
+  adminer:
+    container_name: dso-adminer
+    image: adminer
+    ports:
+      - 8080:8080
