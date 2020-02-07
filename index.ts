@@ -1,14 +1,5 @@
 import waitForDb from "./wait-for-db.ts";
-import {
-  BaseModel,
-  Defaults,
-  Field,
-  FieldType,
-  Join,
-  Model,
-  Where,
-  dso
-} from "./deps.ts";
+import createDatabase from "./create-db.ts";
 
 /*
 console.log("Finished importing dso");
@@ -50,9 +41,13 @@ const intervalId = setInterval(() => {
 
 */
 
+const hostname = "dso-mysql";
+const user = "root";
+const password = "password";
+
 const main = async () => {
-  await waitForDb({ hostname: "dso-mysql" });
-  console.log("This is a change")
+  await waitForDb({ hostname });
+  await createDatabase({ hostname, db: "test", password, username: user });
 };
 
 main();
