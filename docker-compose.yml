@@ -3,19 +3,23 @@ version: "3"
 services:
   deno:
     container_name: dso-deno
-    build: ./backend
+    build: ./
     depends_on:
       - db
 
   db:
     container_name: dso-mysql
     image: mysql
-    command: --default-authentication-plugin=mysql_native_password
+    command: --default-authentication-plugin=mysql_native_password --console
     environment:
       MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
 
   adminer:
     container_name: dso-adminer
     image: adminer
+    environment:
+      - ADMINER_PLUGINS
     ports:
       - 8080:8080
