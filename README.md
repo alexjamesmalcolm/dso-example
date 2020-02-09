@@ -1,0 +1,1 @@
+To try out this project execute `./run.sh` in the project directory. Docker is required. I also use my own fork of dso that uses the latest version of a mysql driver. If dso is updated to use the latest version of that driver then hopefully I'll remember to come back and switch this project back to the official version of dso.
