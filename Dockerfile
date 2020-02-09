@@ -1,4 +1,5 @@
-FROM maxmcd/deno:slim-v0.30.0
+FROM maxmcd/deno:slim-v0.32.0
+WORKDIR /project
 COPY ./ ./
-RUN deno fetch ./deps.ts
-ENTRYPOINT [ "deno", "--allow-write", "--allow-read", "--allow-net", "./index.ts" ]
+RUN deno fetch ./src/deps.ts
+ENTRYPOINT [ "deno", "run", "-c", "tsconfig.json", "--allow-write", "--allow-net", "./src/index.ts" ]

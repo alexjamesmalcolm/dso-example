@@ -9,7 +9,7 @@ services:
 
   db:
     container_name: dso-mysql
-    image: mysql
+    image: mysql:8.0.19
     command: --default-authentication-plugin=mysql_native_password --console
     environment:
       MYSQL_ROOT_PASSWORD: password

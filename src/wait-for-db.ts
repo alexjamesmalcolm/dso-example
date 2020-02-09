@@ -13,7 +13,7 @@ const waitForDb = (props: waitForDbProps): Promise<boolean> =>
         resolve(true);
         clearInterval(interval);
       };
-      Deno.dial({
+      Deno.connect({
         hostname: props.hostname,
         port: props.port || 3306
       })

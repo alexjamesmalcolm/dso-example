@@ -7,4 +7,4 @@ export {
   Join,
   Model,
   Where
-} from "https://deno.land/x/dso@0.6.1/mod.ts";
+} from "https://raw.githubusercontent.com/alexjamesmalcolm/dso/master/mod.ts";
