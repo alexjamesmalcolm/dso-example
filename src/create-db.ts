@@ -1,4 +1,4 @@
-import { dso } from "./deps.ts";
+import { dso } from "../deps.ts";
 
 interface createDatabaseProps {
   hostname: string;

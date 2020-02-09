@@ -1,4 +1,4 @@
-import { BaseModel, Model, Field, FieldType } from "./deps.ts";
+import { BaseModel, Model, Field, FieldType } from "../deps.ts";
 
 @Model("message")
 class Message extends BaseModel {

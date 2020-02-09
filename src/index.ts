@@ -1,7 +1,7 @@
 import waitForDb from "./wait-for-db.ts";
 import createDatabase from "./create-db.ts";
 import Message from "./Message.ts";
-import { dso } from "./deps.ts";
+import { dso } from "../deps.ts";
 
 const hostname = "dso-mysql"; // If ran outside docker container then replace this with "localhost"
 const username = "root";
